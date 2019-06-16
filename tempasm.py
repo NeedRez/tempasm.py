@@ -42,8 +42,10 @@ def main():
                         insideprint = True
                     indent += 4
                 if lineparse.group(1) == '/':     # python unindent 1 level
-                    insidesect = False
                     indent -= 4
+                    if indent <= 0:
+                        indent = 0
+                        insidesect = False
                 if lineparse.group(1) == '>':     # insert python command
                     dest.write(' '*indent + lineparse.group(2)+'\n')
                 if lineparse.group(1) == '}':     # start of python code section
