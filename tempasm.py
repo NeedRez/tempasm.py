@@ -2,7 +2,12 @@
 #	filename: tempasm.py
 #	author: kjp@kellyfx.com
 #	desc: converts assembly template file into an assembly code generator python script, then runs it
+#           ultimate purpose is to make asm() function from assembly, probably from .lss
 #           yes this is a code generator that creates code generators
+#   TODO: bitfield needs a regex search group for before brackets
+#   TODO: give argparse hint that this is file
+#   TODO: a bit touchy how you end the file probably needs a quote close
+#   TODO: ability to wrap each line with quotes to be inserted in asm() from .< directive
 
 from argparse import ArgumentParser
 import re, sys, string
