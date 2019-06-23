@@ -5,7 +5,6 @@
 #           ultimate purpose is to make asm() function from assembly, probably from .lss
 #           yes this is a code generator that creates code generators
 
-#from argparse import ArgumentParser, FileType
 import argparse
 import re, sys, string
 
