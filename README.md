@@ -1,7 +1,14 @@
 # tempasm.py
 Converts a template file into a "code generator" python script, then imports the generator to run the generated code.
 # Purpose
-Bringing the power of Python to Assembly language generation. Let Python "do the math" so you don't have to remember bits and bytes.
+Bringing the power of Python to Assembly language generation. Let Python "do the math" so you don't have to remember bits and bytes. I wanted something that would convert some simple GPIO notation into assembly macros. An AVR GPIO port might be defined such as this:
+~~~
+A[7:0]|[INITA]|AC_DET={T}|RELAY={H}|SCTL3={P}|SCTL2={T}|SCTL1={T}|RXIR={P}|L1_INA={H}|L2_INB={H}
+~~~
+The tags in brackets eg. {T} are replaced by a list of bits such as (0,0) setting the AVR ddr and port values to be written. Doing this with assembly macros might be possible but really the state of affairs for assemblers these days is not so good. Maybe template engine could work, I didn't like what the result looked like. I started to make my own template engine but rather than only expose little bits of python in the template I would expose the whole system.
+
+Essentially Python is now turned "inside-out" where we have a text file with escape characters for python code. This gets converted to Python code including the print statement that puts the text inside quotes. That newly created code is imported to run.
+
 # Usage Example
 Example script is shown here:
 
