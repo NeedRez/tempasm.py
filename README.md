@@ -2,7 +2,7 @@
 Converts a template file into a "code generator" python script, then imports the generator to run the generated code.
 # Purpose
 Bringing the power of Python to Assembly language generation. Let Python "do the math" so you don't have to remember bits and bytes.
-# Usage
+# Usage Example
 Example script is shown here:
 ~~~~
 .>import avr
