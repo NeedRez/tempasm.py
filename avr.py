@@ -9,13 +9,13 @@
 import sys, re
 
 class bitclass:
-    def __init__(self, reg):
+    def __init__(self):
         pass
 
-mask = bitclass('MASK')
-ddr = bitclass('DDR')
-port = bitclass('PORT')
-pin = bitclass('PIN')
+mask = bitclass()
+ddr = bitclass()
+port = bitclass()
+pin = bitclass()
 
 def pdef(signal, pio, bit):
     setattr(ddr, signal, 'DDR{}'.format(pio))
