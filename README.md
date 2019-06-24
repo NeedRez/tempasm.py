@@ -3,8 +3,9 @@ Converts a template file into a "code generator" python script, then imports the
 # Purpose
 Bringing the power of Python to Assembly language generation. Let Python "do the math" so you don't have to remember bits and bytes.
 # Usage Example
-NOTE: this requires avr.py which is in still development
 Example script is shown here:
+
+NOTE: this requires avr.py which is in still development
 ~~~~
 .>import avr
 .>from avr import ddr, port, pin, mask
